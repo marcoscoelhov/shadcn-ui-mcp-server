@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/@jpisnice%2Fshadcn-ui-mcp-server.svg)](https://badge.fury.io/js/@jpisnice%2Fshadcn-ui-mcp-server)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![smithery badge](https://smithery.ai/badge/@marcoscoelhov/shadcn-ui-mcp-server)](https://smithery.ai/server/@marcoscoelhov/shadcn-ui-mcp-server)
 
 A Model Context Protocol (MCP) server that provides AI assistants with comprehensive access to [shadcn/ui v4](https://ui.shadcn.com/) components, blocks, demos, and metadata. This server enables AI tools like Claude Desktop, Continue.dev, VS Code, Cursor, and other MCP-compatible clients to retrieve and work with shadcn/ui components seamlessly.
 
@@ -16,6 +17,14 @@ A Model Context Protocol (MCP) server that provides AI assistants with comprehen
 - **Framework Support**: Switch between React (shadcn/ui) and Svelte (shadcn-svelte) implementations
 
 ## 📦 Quick Start
+
+### Installing via Smithery
+
+To install shadcn-ui-mcp-server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@marcoscoelhov/shadcn-ui-mcp-server):
+
+```bash
+npx -y @smithery/cli install @marcoscoelhov/shadcn-ui-mcp-server --client claude
+```
 
 ### ⚡ Using npx (Recommended)
 
