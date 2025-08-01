@@ -1,0 +1,31 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => {
+      const args = ['build/index.js'];
+      if (config.framework) {
+        args.push('--framework', config.framework);
+      }
+      if (config.githubApiKey) {
+        args.push('--github-api-key', config.githubApiKey);
+      }
+      return { command: 'node', args };
+    }
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    properties:
+      githubApiKey:
+        type: string
+        description: GitHub Personal Access Token for API requests
+      framework:
+        type: string
+        default: react
+        description: "Framework to use: 'react' or 'svelte'"
+  exampleConfig:
+    githubApiKey: ghp_your_token_here
+    framework: react
